@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NotesAppMVVMKotlin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_note_app_splash">Notes App</string>
+    <string name="title_des_splash">Life is too Fast don\'t forget anything\n just Note it!</string>
+    <string name="title_by_developers">By\n TuanAnhmvp</string>
+    <string name="title_create_notes">Title...</string>
+    <string name="subtitle_create_notes">Subtitle...</string>
+    <string name="notes_create_notes">Notes...</string>
+    <string name="date_Notes">12 August 2022</string>
+    <string name="want_to_delete">Are you sure want to delete\n This Note?</string>
+    <string name="no_delete_note">No</string>
+    <string name="yes_delete_note">Yes</string>
+</resources>
