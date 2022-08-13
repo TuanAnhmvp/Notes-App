@@ -6,7 +6,7 @@ import com.example.notesappmvvmkotlin.Model.Notes
 
 class NotesRepository(private val dao: NoteDao) {
     fun getAllNotes(): LiveData<List<Notes>> {
-        return dao.getNotes()
+        return dao.getAllNotes()
     }
 
     fun insertNotes(notes: Notes) {

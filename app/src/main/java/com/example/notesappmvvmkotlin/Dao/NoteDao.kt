@@ -7,7 +7,7 @@ import com.example.notesappmvvmkotlin.Model.Notes
 @Dao
 interface NoteDao {
     @Query("SELECT * FROM Notes")
-    fun getNotes(): LiveData<List<Notes>>
+    fun getAllNotes(): LiveData<List<Notes>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertNotes(notes: Notes)
