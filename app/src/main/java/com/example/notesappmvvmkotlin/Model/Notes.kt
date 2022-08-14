@@ -3,6 +3,7 @@ package com.example.notesappmvvmkotlin.Model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "Notes")
 class Notes(
@@ -13,5 +14,5 @@ class Notes(
     var notes: String = "",
     var date: String = "",
     var priority: String = ""
-){
+):Serializable{
 }
