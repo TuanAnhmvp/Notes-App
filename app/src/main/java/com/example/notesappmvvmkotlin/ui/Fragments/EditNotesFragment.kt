@@ -1,10 +1,9 @@
 package com.example.notesappmvvmkotlin.ui.Fragments
 
 import android.os.Bundle
+import android.view.*
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -13,6 +12,7 @@ import com.example.notesappmvvmkotlin.Model.Notes
 import com.example.notesappmvvmkotlin.R
 import com.example.notesappmvvmkotlin.ViewModel.NotesViewModel
 import com.example.notesappmvvmkotlin.databinding.FragmentEditNotesBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,6 +32,8 @@ class EditNotesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentEditNotesBinding.inflate(layoutInflater, container, false)
+        /*set menu*/
+        setHasOptionsMenu(true)
 
         binding.edtTitle.setText(args.data.title)
         binding.edtSubtitle.setText(args.data.subTitle)
@@ -112,5 +114,50 @@ class EditNotesFragment : Fragment() {
         }
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+
+            R.id.menu_delete -> {
+                chooseDelete()
+
+                true
+
+
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
+    private fun chooseDelete() {
+        val bottomSheet: BottomSheetDialog = BottomSheetDialog(requireContext(), R.style.BottomSheetStyle)
+        bottomSheet.setContentView(R.layout.dialog_delete)
+
+
+        val txtNo = bottomSheet.findViewById<TextView>(R.id.delete_Dial_No)
+        val txtYes = bottomSheet.findViewById<TextView>(R.id.delete_Dial_Yes)
+
+        txtNo?.setOnClickListener {
+            bottomSheet.dismiss()
+
+        }
+
+        txtYes?.setOnClickListener {
+            viewModel.deleteNotes(args.data.id!!)
+            bottomSheet.dismiss()
+
+
+        }
+        bottomSheet.show()
+    }
+
 
 }
