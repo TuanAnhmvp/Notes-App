@@ -12,4 +12,7 @@
     <string name="want_to_delete">Are you sure want to delete\n This Note?</string>
     <string name="no_delete_note">No</string>
     <string name="yes_delete_note">Yes</string>
+    <string name="high_filter">High</string>
+    <string name="medium_filter">Medium</string>
+    <string name="low_filter">Low</string>
 </resources>

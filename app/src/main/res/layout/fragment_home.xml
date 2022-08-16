@@ -11,14 +11,87 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:weightSum="9"
+            android:id="@+id/linearLayout_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/allNotes"
+                android:layout_width="40dp"
+                android:background="@drawable/btn_filter"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/filter_High"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:fontFamily="@font/regular"
+                android:text="@string/high_filter"
+                android:background="@drawable/btn_filter_shape"
+                android:textColor="@color/red_color"
+                android:layout_marginStart="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/filter_Medium"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:fontFamily="@font/regular"
+                android:text="@string/medium_filter"
+                android:background="@drawable/btn_filter_shape"
+                android:textColor="@color/yellow_color"
+                android:layout_marginStart="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/filter_Low"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:fontFamily="@font/regular"
+                android:text="@string/low_filter"
+                android:background="@drawable/btn_filter_shape"
+                android:textColor="@color/green_color"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvAllNotes"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/item_notes"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_option" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAddNotes"

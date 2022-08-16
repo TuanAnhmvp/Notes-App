@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/drawable/btn_filter_shape.xml" value="0.1" />
         <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/drawable/edt_txt_shape.xml" value="0.1" />
         <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/drawable/green_dot.xml" value="0.1" />
         <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/drawable/no_btn.xml" value="0.1" />
@@ -14,8 +15,8 @@
         <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/dialog_delete.xml" value="0.176" />
         <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/fragment_create_notes.xml" value="0.176" />
         <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/fragment_edit_notes.xml" value="0.1" />
-        <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/fragment_home.xml" value="0.17592592592592593" />
-        <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/item_notes.xml" value="0.176" />
+        <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/fragment_home.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android_Studio/TryhardKotlin/Note_App_Kotlin/NotesAppMVVMKotlin/app/src/main/res/layout/item_notes.xml" value="0.2" />
       </map>
     </option>
   </component>

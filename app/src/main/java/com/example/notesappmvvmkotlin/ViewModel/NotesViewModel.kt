@@ -16,6 +16,11 @@ class NotesViewModel(application: Application):AndroidViewModel(application) {
 
     }
 
+    /*get filter notes*/
+    fun getLowNotes(): LiveData<List<Notes>> = repository.getLowNotes()
+    fun getMediumNotes(): LiveData<List<Notes>> = repository.getMediumNotes()
+    fun getHighNotes(): LiveData<List<Notes>> = repository.getHighNotes()
+
     fun addNotes(notes: Notes) {
         repository.insertNotes(notes)
     }
