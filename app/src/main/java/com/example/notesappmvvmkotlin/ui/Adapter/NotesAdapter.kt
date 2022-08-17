@@ -10,7 +10,13 @@ import com.example.notesappmvvmkotlin.R
 import com.example.notesappmvvmkotlin.databinding.ItemNotesBinding
 import com.example.notesappmvvmkotlin.ui.Fragments.HomeFragmentDirections
 
-class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) : RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
+class NotesAdapter(val requireContext: Context, var notesList: List<Notes>) : RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
+
+    //filter
+    fun filtering(newFilterList: ArrayList<Notes>) {
+        notesList = newFilterList
+        notifyDataSetChanged()
+    }
 
     class notesViewHolder(val binding: ItemNotesBinding) : RecyclerView.ViewHolder(binding.root)
 

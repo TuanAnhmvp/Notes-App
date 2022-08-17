@@ -153,6 +153,7 @@ class EditNotesFragment : Fragment() {
         txtYes?.setOnClickListener {
             viewModel.deleteNotes(args.data.id!!)
             bottomSheet.dismiss()
+            Navigation.findNavController(it).navigate(R.id.action_editNotesFragment_to_homeFragment)
 
 
         }
